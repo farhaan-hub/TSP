@@ -1,21 +1,21 @@
 # Dependencies
-    - python 2.7+
-    - pip install argparse (if not already installed)
+    - C++
 
-## (1) maxSAT.py
-Max-SAT solver (See details in `maxSAT.py`)
+## (1) tsp.cpp
+TSP solver (See details in `tsp.cpp`)
 #### usage
 ```bash
-python maxSAT.py -h
-python maxSAT.py -d "/mnt/c/cs271p-final/tests/benchmarks"
+g++ tsp.cpp
+./a.out
+
+Input File Name : tests\sample_test.txt
 ```
-NOTE: make sure -d points to the  folder/directory containing the problem for CNF in the format defined here as below only.
-https://github.com/baiqiushi/cs271p/blob/20a562c8b33125a8bdc8f9ce312a2622c328fabd/genMaxSAT.py
+NOTE: 
+1. make sure input file name points to the  folder/directory containing the input problem 
+   (For simplicity, place the input file in the same folder as tsp.cpp and enter the file name. eg: sample_test.txt)
+2. Format of the input is described here : https://github.com/baiqiushi/cs271p/blob/20a562c8b33125a8bdc8f9ce312a2622c328fabd/genMaxSAT.py
 
-Any other files in the directory will not be parsed an will be skipped without terminating the program
 
+This program supports early termination either by USERS INTERRUPT i.e. ^C or if the time runs out (default 15 mins)
 
-
-this program supports early termination either by USERS INTERRUPT i.e. ^C or if the time runs out
-
-checkout examples in **ExampleRun.png** file in the zip for more info
+checkout examples in **sample_run_screenshot.png** file in the zip for more info
